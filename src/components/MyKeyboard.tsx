@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import { Styles } from '../styles/GlobalStyles';
 import { myColors } from '../styles/Colors';
 
+
 export default function MyKeyboard() {
     const [firstNumber, setFirstNumber] = React.useState(""); // Tracks when user keys in first number value
     const [secondNumber, setSecondNumber] = React.useState(""); // Tracks when user keys in second number value (Right before a math operation)
@@ -13,17 +14,17 @@ export default function MyKeyboard() {
     const handleNumberPress = (buttonValue: string) => { // Event handler that handles when Number Buttons are pressed. Represented by 'title' prop.
         if (firstNumber.length < 12) { // Checkpoint if the state value's length is less than max 12 digits
             setFirstNumber(firstNumber + buttonValue); // To set new state of firstNumber by concatenating previous state value with new value of the button just pressed ('title').
-            console.log(`firstNumber is ${firstNumber}`)
+            // console.log(`firstNumber is ${firstNumber}`)
         }
         if (operation !== "") {
             setFirstNumber(buttonValue)
-            console.log('No operation yet')
-        }
+            // console.log('No operation yet')
+        }                                                   
         if (secondNumber.length < 12) {
             setSecondNumber(firstNumber + operation + buttonValue) // but dont display the operation yet unless ...
-            console.log(`secondNumber is ${secondNumber}`)
+            // console.log(`secondNumber is ${secondNumber}`)
         }
-    };
+    }; 
 
 
     const handleOperationPress = (buttonValue: string) => { // Event handler that handles when math operations are pressed (Right after full firstNumber is input). Represented by button's 'title' prop.
@@ -142,7 +143,7 @@ export default function MyKeyboard() {
             >  
                 <Text style={Styles.screenSecondNumber}>  
                     {secondNumber}
-                    <Text>{operation}</Text>
+                    {/* <Text>{operation}</Text> */}
                 </Text>
                 {firstNumberDisplay()}
             </View>
