@@ -1,5 +1,5 @@
 ## Basic Calculator with Dark Mode
-Adapted from 
+Adapted from @betomoedano
 
 ## Run / Deploy Steps
 
