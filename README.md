@@ -1,6 +1,6 @@
 ## Basic Calculator with Dark Mode
 Adapted partially from @betomoedano but also modified with additional features:
-- [] Item1
+- [ ] Item1
 - [x] Item2
 
 ## Run / Deploy Steps
