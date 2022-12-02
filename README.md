@@ -1,5 +1,6 @@
 ## Basic Calculator with Dark Mode (Work in Progress)
-![image](https://user-images.githubusercontent.com/40747156/205188194-6faf80fb-049b-4358-a22e-957861f4a53d.png) ![image](https://user-images.githubusercontent.com/40747156/205188289-c57d6dcb-9be4-4571-91ec-1f76fec359ec.png)
+![image](https://user-images.githubusercontent.com/40747156/205188194-6faf80fb-049b-4358-a22e-957861f4a53d.png) ![image](https://user-images.githubusercontent.com/40747156/205188362-70805277-14b9-4856-b722-63b4a389543a.png)
+
 
 
 Adapted partially from @betomoedano but also updated my own tweaks with some new modifications + various additional features:
