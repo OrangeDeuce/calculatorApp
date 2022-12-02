@@ -5,6 +5,7 @@ import { ThemeContext } from './src/context/ThemeContext';
 import { myColors } from './src/styles/Colors';
 import Button from './src/components/Button';
 import MyKeyboard from './src/components/MyKeyboard';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function App() {
   const [theme, setTheme] = useState('light'); 
@@ -14,7 +15,9 @@ export default function App() {
         
         theme === 'light' ? styles.container : [styles.container, {backgroundColor: '#000'}] 
       }>
-        <Text>Wsup Fool</Text>
+        {
+          theme === 'light' ? <Ionicons name='sunny' size={28} /> : <Ionicons name='moon' color='white' size={28} />
+        }   
         <StatusBar style="auto" />
         <Switch   
           value={theme === 'light'}   
