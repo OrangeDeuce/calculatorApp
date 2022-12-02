@@ -16,4 +16,4 @@ npm start
 ```
 
 ## Credit / Acknowledgement
-Original tutorial by at: (![Original link]https://www.youtube.com/watch?v=_fYgGS46h2w&t=233s)
+Original tutorial by at: ![Original link](https://www.youtube.com/watch?v=_fYgGS46h2w&t=233s)
