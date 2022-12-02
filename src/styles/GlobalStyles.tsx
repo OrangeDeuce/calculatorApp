@@ -3,6 +3,15 @@ import { myColors } from "./Colors";
 
 export const Styles = StyleSheet.create({
     // Button
+    btnOperationActivated: {
+        width: 72,
+        height: 72,
+        borderRadius: 24,
+        backgroundColor: myColors.red,
+        justifyContent: "center",
+        alignItems: "center",
+        margin: 8,
+    },
     btnBlue: {
         width: 72,
         height: 72,
@@ -61,15 +70,15 @@ export const Styles = StyleSheet.create({
         color: myColors.gray,
         fontWeight: '200',
         alignSelf: "flex-end",
-        borderColor: 'pink',
-        borderWidth: 1
+        // borderColor: 'pink',
+        // borderWidth: 1
     },
     screenSecondNumber: {
         fontSize: 40,
         color: myColors.gray,
         fontWeight: '200',
         alignSelf: "flex-end",
-        borderColor: 'teal',
-        borderWidth: 1
+        // borderColor: 'teal',
+        // borderWidth: 1
     },
 });

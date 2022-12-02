@@ -6,29 +6,24 @@ import { myColors } from '../styles/Colors';
 
 
 export default function MyKeyboard() {
-    const operationsArray = [''];
     const [firstNumber, setFirstNumber] = React.useState(""); // Tracks when user keys in first number value
     const [secondNumber, setSecondNumber] = React.useState(""); // Tracks when user keys in second number value (Right before a math operation)
     const [operation, setOperation] = React.useState(""); // For any subsequent math operation that may come after 2nd number value is input
     const [result, setResult] = React.useState<Number | null>(null); // To calculate and display results of math operation(s)
-    const [secondDisplay, setSecondDisplay] = React.useState(operationsArray);
 
     const handleNumberPress = (buttonValue: string) => { // Event handler that handles when Number Buttons are pressed. Represented by 'title' prop.
         if (firstNumber.length < 12) { // Checkpoint if the state value's length is less than max 12 digits
             setFirstNumber(firstNumber + buttonValue); // To set new state of firstNumber by concatenating previous state value with new value of the button just pressed ('title').
             // console.log(`firstNumber is ${firstNumber}`)
-            setSecondDisplay((prevDisplay) => [...prevDisplay, buttonValue]);
         }
         if (operation !== "") {
             setFirstNumber(buttonValue)
-            // console.log(`But now firstNumber is ${firstNumber}`)
+            // console.log('No operation yet')
         }                                                   
-        // if (secondNumber.length < 12) {
-        //     setSecondNumber(firstNumber + operation + buttonValue) // but dont display the operation yet unless ...
-        // }
-
-
-        
+        if (secondNumber.length < 12) {
+            setSecondNumber(firstNumber + operation + buttonValue) // but dont display the operation yet unless ...
+            // console.log(`secondNumber is ${secondNumber}`)
+        }
     }; 
 
 
@@ -36,8 +31,6 @@ export default function MyKeyboard() {
         setOperation(buttonValue); // To first call setOperation with buttonValue / 'title' passed in to change local state of 'operation'. Will est. what math operation to perform.
         setSecondNumber(firstNumber) // then to properly display the 2nd input Number in this math operation. Also transfers/holds onto value of firstNumber for reference.
         // setFirstNumber(''); //To reset firstNumber so the display clears it out to '0'
-        setSecondDisplay((prevDisplay) => [...prevDisplay, buttonValue]);
-        
     };
 
     const handlePercent = () => { //Event handler for handling % formatting on displayed Number values
@@ -53,25 +46,24 @@ export default function MyKeyboard() {
         setSecondNumber('');
         setOperation('');
         setResult(null);
-        setSecondDisplay(['']);
     };
 
     const getResult = () => { // Event handler to handle final calculation after Numbers and math operations selected. Takes in the 'operation' arg and reads the 'secondNumber' and 'firstNumber'.
         switch (operation) {
             case "+": // Addition operation
-                clear(); // to first clear out all local state variables back to ''
+                // clear(); // to first clear out all local state variables back to ''
                 setResult(parseInt(secondNumber) + parseInt(firstNumber)); // to set new state variable 'result' to a new value: After converting strings to integers, its the sum of the integers.
                 break; // To halt any further switch operation from being parsed.
             case "-":  // Subtraction operation
-                clear();
+                // clear();
                 setResult(parseInt(secondNumber) - parseInt(firstNumber));
                 break;
             case "*":  // Multiplication operation
-                clear();
+                // clear();
                 setResult(parseInt(secondNumber) * parseInt(firstNumber));
                 break;
             case "÷":  // Division operation
-                clear();
+                // clear();
                 setResult(parseInt(secondNumber) / parseInt(firstNumber));
                 break;
             // case "%":
@@ -91,7 +83,7 @@ export default function MyKeyboard() {
         }
     };
 
-    const firstNumberDisplay = () => { // Logic for HOW to display the Number inputs typed into keypad (What gets displayed in larger box display - and HOW to display it.)
+    const firstNumberDisplay = () => { // Logic to properly display the Number inputs typed into keypad (What gets displayed in larger box display - and HOW to display it.)
         if(result !== null) { // Scenario 1: If a completed calculation sets a new 'result' state value that now exists (as a 'string'). And to conditionally display the following:
             return (
                 <Text
@@ -116,6 +108,14 @@ export default function MyKeyboard() {
             );
         }
 
+        // if(firstNumber && operation && firstNumber.length < 6) { //Scenario 3: 
+        //     return (
+        //         <Text style={Styles.screenFirstNumber}>
+        //             {firstNumber}
+        //         </Text>
+        //     );
+        // }
+
         if(firstNumber === "") {
             return <Text style={Styles.screenFirstNumber}>{"0"}</Text>; // Scenario 3: What to display by default ('0') if no number is typed in at all ('')
         }
@@ -129,8 +129,6 @@ export default function MyKeyboard() {
         }
     };
 
- 
-
     return(
         <View style={Styles.viewBottom}>
             <View  
@@ -139,12 +137,12 @@ export default function MyKeyboard() {
                     width: "90%",
                     justifyContent: 'flex-end',
                     alignSelf: 'center',
-                    // borderColor: 'blue',
-                    // borderWidth: 2
+                    borderColor: 'blue',
+                    borderWidth: 2
                 }}
             >  
                 <Text style={Styles.screenSecondNumber}>  
-                    {secondDisplay}
+                    {secondNumber}
                     {/* <Text>{operation}</Text> */}
                 </Text>
                 {firstNumberDisplay()}
