@@ -8,9 +8,9 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
+*.xlsx
 web-build/
 
 # macOS
 .DS_Store
 
-State_Management - Calculator
