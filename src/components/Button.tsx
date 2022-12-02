@@ -8,15 +8,18 @@ interface ButtonProps { //TypeScript type checking 4 all properties and 1 method
     title: string; // title will be a string value only
     isBlue?: boolean; // will be a boolean value only
     isGray?: boolean; // will be a boolean value only
-    isNumber?: boolean, // To classify the button value as either a: Number? or a math operation?
-    isOperation?: boolean, // To classify the button value as either a: Number? or a math operation?
+    // isNumber?: boolean, // To classify the button value as either a: Number? or a math operation?
+    // isOperation?: boolean, // To classify the button value as either a: Number? or a math operation?
+    // operation: string;
 }
 
-export default function Button({ onPress, title, isBlue, isGray, isNumber, isOperation }: ButtonProps){ // Our Button component will require passing in  props as outlined by ButtonProps interface
+export default function Button({ onPress, title, isBlue, isGray}: ButtonProps){ // Our Button component will require passing in  props as outlined by ButtonProps interface
     const theme = useContext(ThemeContext); // To call useContext that will make available our 'light' value and assigned to variable name 'theme'
     return (
         <Pressable  // 1 single Pressable button that can dynamically change appearance styling based on isBlue, isGrey or 'light'.
             style={
+                // operation !== ""
+                // ? Styles.btnOperationActivated
                 isBlue
                 ? Styles.btnBlue
                 : isGray
@@ -24,6 +27,7 @@ export default function Button({ onPress, title, isBlue, isGray, isNumber, isOpe
                 : theme === 'light'
                 ? Styles.btnLight
                 : Styles.btnDark 
+                
             }
             onPress={onPress} // The event handler to pass in which dictates what this button will do
         >
