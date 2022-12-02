@@ -3,7 +3,7 @@
 
 
 
-Adapted partially from @betomoedano but also updated my own tweaks with some new modifications + various additional features:
+Adapted partially from @betomoedano but also includes modifications of existing features + various additional features:
 - [x] Display all user button presses (Both numbers and operations) in secondary display 
 - [x] Insert dark mode/light mode icon at Switch
 
