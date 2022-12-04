@@ -12,6 +12,7 @@
 - [ ] To highlight current math operation button when next pending number to still be pressed
 - [ ] Add logic to (-) button
 - [ ] Add logic to (+/-) button
+- [ ] Add (,) 1000s separator
 
 
 
