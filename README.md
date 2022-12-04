@@ -6,7 +6,7 @@
 - [x] Insert dark mode/light mode icon at Switch
 - [x] Basic 2 number ops: When  you press an operation make sure first number does NOT yet disappear (Keep displayed)
 - [x] Add additional local state to capture all history of numbers and math ops before hitting result = 
-- [ ] Nudge the Number Label (Misaligned for all numbers to the left)
+- [x] Nudge the Number Label (Misaligned for all numbers to the left)
 - [ ] To chain multiple operations in succession continously adding a new number + new math operation
 - [ ] When you press each math operation it will calculate so far the result to appear in primary display
 - [ ] To highlight current math operation button when next pending number to still be pressed
