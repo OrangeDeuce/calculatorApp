@@ -13,6 +13,8 @@
 - [ ] Add logic to (-) button
 - [ ] Add logic to (+/-) button
 - [ ] Add (,) 1000s separator
+- [ ] When press = (Result will be used for next pending calculation)
+- [ ] then when you press the next math operation in sequence, the former result displays in secondary display along with new math operation symbol
 
 
 
