@@ -18,6 +18,7 @@
 - [ ] Fix primary display (Reading only single digits after thousands separators added)
 - [ ] When press = (Result will be used for next pending calculation)
 - [ ] then when you press the next math operation in sequence, the former result displays in secondary display along with new math operation symbol
+- [ ] After inputting 11 digits, to prevent wrapping to a next line (Keep styling fixed even when 11+ digits are entered)
 
 
 
