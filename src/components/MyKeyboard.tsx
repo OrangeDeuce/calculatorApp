@@ -101,7 +101,7 @@ export default function MyKeyboard() {
                         : [Styles.screenFirstNumber, {color: myColors.result, fontSize: 50}] // Scenario 1B: final result is > 5 digits
                     }
                 >
-                    {result?.toString()} {/*Once styling is applied, to convert integer result to a string to render*/}
+                    {result?.toLocaleString()} {/*Once styling is applied, to convert integer result to a string to render*/}
                 </Text>
             );
         }
@@ -121,12 +121,13 @@ export default function MyKeyboard() {
         }
 
         if(firstNumber.length > 5 && firstNumber.length < 8) { // Scenario 4: firstNumber length bet. 6 to 7 digits.
-            return <Text style={[Styles.screenFirstNumber, {fontSize: 70}]}>{firstNumber}</Text>;
+            return <Text style={[Styles.screenFirstNumber, {fontSize: 70}]}>{firstNumber.toLocaleString()}</Text>;
         }
 
         if(firstNumber.length > 7) { // Scenario 5: firstNumber length bet. 8 to 12 digits max (max set earlier in handleNumberPress())
             return <Text style={[Styles.screenFirstNumber, {fontSize: 50}]}>{firstNumber}</Text>;
         }
+        
     };
 
  
