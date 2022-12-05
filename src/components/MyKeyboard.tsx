@@ -26,9 +26,6 @@ export default function MyKeyboard() {
         // if (secondNumber.length < 12) {
         //     setSecondNumber(firstNumber + operation + buttonValue) // but dont display the operation yet unless ...
         // }
-
-
-        
     }; 
 
 
@@ -111,7 +108,7 @@ export default function MyKeyboard() {
                 <Text
                     style={Styles.screenFirstNumber}
                 >
-                    {firstNumber} {/*To apply one basic styling all firstNumber values less than 6 digits*/}
+                    {parseInt(firstNumber).toLocaleString()} {/*To apply one basic styling all firstNumber values less than 6 digits and also added number inputs with thousands separators */} 
                 </Text>
             );
         }
@@ -121,11 +118,11 @@ export default function MyKeyboard() {
         }
 
         if(firstNumber.length > 5 && firstNumber.length < 8) { // Scenario 4: firstNumber length bet. 6 to 7 digits.
-            return <Text style={[Styles.screenFirstNumber, {fontSize: 70}]}>{firstNumber.toLocaleString()}</Text>;
+            return <Text style={[Styles.screenFirstNumber, {fontSize: 70}]}>{parseInt(firstNumber).toLocaleString()}</Text>; // Set number inputs with thousands separators
         }
 
         if(firstNumber.length > 7) { // Scenario 5: firstNumber length bet. 8 to 12 digits max (max set earlier in handleNumberPress())
-            return <Text style={[Styles.screenFirstNumber, {fontSize: 50}]}>{firstNumber}</Text>;
+            return <Text style={[Styles.screenFirstNumber, {fontSize: 50}]}>{parseInt(firstNumber).toLocaleString()}</Text>; // Set number inputs with thousands separators
         }
         
     };
