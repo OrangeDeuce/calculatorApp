@@ -51,10 +51,12 @@ export const Styles = StyleSheet.create({
     smallTextLight: {
         fontSize: 32,
         color: myColors.white,
+        textAlign: 'center',
     },
     smallTextDark: {
         fontSize: 32,
         color: myColors.black,
+        textAlign: 'center',
     },
     // Keyboard
     row: {
