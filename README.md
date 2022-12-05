@@ -10,7 +10,7 @@
 - [ ] To chain multiple operations in succession continously adding a new number + new math operation
 - [ ] When you press each math operation it will calculate so far the result to appear in primary display
 - [ ] To highlight current math operation button when next pending number to still be pressed
-- [ ] Add logic to (-) button
+- [ ] Add logic to (%) button
 - [ ] Add logic to (+/-) button
 - [x] Add (,) 1000s separator to result (To tweak helper function firstNumberDisplay)
 - [x] Add (,) 1000s separator to user inputs (numbers) 
