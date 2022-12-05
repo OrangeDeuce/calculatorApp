@@ -12,7 +12,8 @@
 - [ ] To highlight current math operation button when next pending number to still be pressed
 - [ ] Add logic to (-) button
 - [ ] Add logic to (+/-) button
-- [ ] Add (,) 1000s separator (To tweak helper function firstNumberDisplay)
+- [x] Add (,) 1000s separator to result (To tweak helper function firstNumberDisplay)
+- [ ] Add (,) 1000s separator to user inputs (numbers) 
 - [ ] When press = (Result will be used for next pending calculation)
 - [ ] then when you press the next math operation in sequence, the former result displays in secondary display along with new math operation symbol
 
