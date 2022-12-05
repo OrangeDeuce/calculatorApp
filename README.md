@@ -19,6 +19,7 @@
 - [ ] When press = (Result will be used for next pending calculation)
 - [ ] then when you press the next math operation in sequence, the former result displays in secondary display along with new math operation symbol
 - [ ] After inputting 11 digits, to prevent wrapping to a next line (Keep styling fixed even when 11+ digits are entered)
+- [ ] When you press a math operation, if an operation already is in local state, then to clear it out first leaving only the recent most operation
 
 
 
