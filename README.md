@@ -13,7 +13,8 @@
 - [ ] Add logic to (-) button
 - [ ] Add logic to (+/-) button
 - [x] Add (,) 1000s separator to result (To tweak helper function firstNumberDisplay)
-- [ ] Add (,) 1000s separator to user inputs (numbers) 
+- [x] Add (,) 1000s separator to user inputs (numbers) 
+- [ ] Fix primary display (Reading only single digits after thousands separators added)
 - [ ] When press = (Result will be used for next pending calculation)
 - [ ] then when you press the next math operation in sequence, the former result displays in secondary display along with new math operation symbol
 
