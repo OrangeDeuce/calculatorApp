@@ -1,7 +1,7 @@
 ## Basic Calculator with Dark Mode (Work in Progress)
 ![image](https://user-images.githubusercontent.com/40747156/205188194-6faf80fb-049b-4358-a22e-957861f4a53d.png) ![image](https://user-images.githubusercontent.com/40747156/205188362-70805277-14b9-4856-b722-63b4a389543a.png)
 
-### Adapted partially from @betomoedano but includes my own modifications of existing features + inclusion of various additional features:
+### Adapted partially from @betomoedano but includes new modifications of existing features + inclusion of various additional features:
 - [x] Display all user button presses (Both numbers and operations) in secondary display before pressing = for result
 - [x] Insert dark mode/light mode icon at Switch
 - [x] Basic 2 number ops: When  you press an operation make sure first number does NOT yet disappear (Keep displayed)
